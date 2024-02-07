@@ -37,6 +37,6 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureServiceConnectionName: 'NNPC Chatbot'
-    appName: 'Your Azure App Service name'
+    azureServiceConnectionName: 'Chatfe'
+    appName: 'chatbot_ui'
     package: '$(Build.ArtifactStagingDirectory)'

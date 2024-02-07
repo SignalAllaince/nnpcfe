@@ -69,7 +69,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: chatbot_ui'
             inputs:
-              azureSubscription: '5293d7f2-ede4-4727-b96a-9a8bbd2f6d73'
+              azureServiceConnectionName: 'Chatfe'
               appType: 'webAppLinux'
               appName: 'chatdesk'
               deployToSlotOrASE: true

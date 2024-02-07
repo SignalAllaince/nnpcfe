@@ -37,6 +37,6 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '5293d7f2-ede4-4727-b96a-9a8bbd2f6d73'
+    azureSubscription: 'SubscriptionID'
     appName: 'chatbot_ui'
     package: '$(Build.ArtifactStagingDirectory)'

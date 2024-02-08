@@ -1,79 +1,74 @@
-# Node.js with React
-# Build a Node.js project that uses React.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
 - master
- 
+
 variables:
- 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'chatfe1'
- 
+  azureServiceConnectionName: 'chatfe1'
+
   # Web app name
   webAppName: 'chatdesk'
- 
-  # Environment name
-  environmentName: 'chatbot_ui'
- 
+
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
- 
+
+  # Environment name
+  environmentName: 'chatbot_ui'
+
+  # Project root folder. Point to the folder containing manage.py file.
+  projectRoot: $(System.DefaultWorkingDirectory)
+
 stages:
 - stage: Build
   displayName: Build stage
   jobs:
-  - job: Build
-    displayName: Build
+  - job: BuildJob
     pool:
       vmImage: $(vmImageName)
- 
     steps:
     - task: NodeTool@0
       inputs:
         versionSpec: '18.x'
       displayName: 'Install Node.js'
- 
+
     - script: |
         npm install
         npm run build --if-present
       displayName: 'npm install, build'
- 
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+        rootFolderOrFile: '$(projectRoot)'
         includeRootFolder: false
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         replaceExistingArchive: true
- 
+
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      displayName: 'Upload package'
       artifact: drop
- 
+
 - stage: Deploy
-  displayName: Deploy stage
+  displayName: 'Deploy Web App'
   dependsOn: Build
   condition: succeeded()
   jobs:
-  - deployment: Deploy
-    displayName: Deploy
-    environment: $(environmentName)
+  - deployment: DeploymentJob
     pool:
       vmImage: $(vmImageName)
+    environment: $(environmentName)
     strategy:
       runOnce:
         deploy:
           steps:
-          - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: chatbot_ui'
+          - task: NodeTool@0
             inputs:
-              azureSubscription: 'chatfe1'
-              appType: 'webAppLinux'
-              appName: 'chatdesk'
-              deployToSlotOrASE: true
-              resourceGroupName: 'chatbot_ui'
-              slotName: 'production'
-              package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
-              runtimeStack: 'NODE|18-lts'
+              versionSpec: '$(nodeVersion)'
+            displayName: 'Use node version'
+
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : chatbot_ui'
+            inputs:
+              azureSubscription: $(azureServiceConnectionName)
+              appName: $(webAppName)
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip

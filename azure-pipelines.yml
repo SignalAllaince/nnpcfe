@@ -4,13 +4,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionName: 'testchat'
+  azureServiceConnectionName: 'chatfe1'
 
   # Web app name
-  webAppName: 'nnpcfe'
+  webAppName: 'chatdesk'
 
   # Environment name
-  environmentName: 'testchat'
+  environmentName: 'chatbot_ui'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -27,7 +27,7 @@ stages:
     steps:
     - task: NodeTool@0
       inputs:
-        versionSpec: '14.x'
+        versionSpec: '18.x'
       displayName: 'Install Node.js'
       
     - script: |
@@ -62,7 +62,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: testchat'
+            displayName: 'Azure Web App Deploy: chatbot_ui'
             inputs:
               azureSubscription: $(azureServiceConnectionName)
               appType: webAppLinux

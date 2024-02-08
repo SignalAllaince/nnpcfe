@@ -9,7 +9,7 @@ trigger:
 variables:
  
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionName: 'Chatfe'
+  azureSubscription: 'chatfe1'
  
   # Web app name
   webAppName: 'chatdesk'
@@ -69,7 +69,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: chatbot_ui'
             inputs:
-              azureServiceConnectionName: 'Chatfe'
+              azureSubscription: 'chatfe1'
               appType: 'webAppLinux'
               appName: 'chatdesk'
               deployToSlotOrASE: true

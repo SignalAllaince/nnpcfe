@@ -2,48 +2,58 @@ trigger:
 - master
 
 variables:
+
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionName: 'testchat'
 
   # Web app name
   webAppName: 'nnpcfe'
 
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-
   # Environment name
   environmentName: 'testchat'
 
-  # Project root folder. Point to the folder containing manage.py file.
-  projectRoot: $(System.DefaultWorkingDirectory)
-
+   # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+  System.Debug: true
 stages:
 - stage: Build
   displayName: Build stage
-  jobs:
-  - job: BuildJob
-    pool:
-      vmImage: $(vmImageName)
+  pool:
+    vmImage: $(vmImageName)
+  jobs:  
+  - job: Build_Staging
+    displayName: Build Staging
     steps:
-    - task: NodeTool@0
-      inputs:
-        versionSpec: '18.x'
-      displayName: 'Install Node.js'
-
-    - script: |
-        npm install
-        npm run build --if-present
-      displayName: 'npm install, build'
-
-    - task: ArchiveFiles@2
-      displayName: 'Archive files'
-      inputs:
-        rootFolderOrFile: '$(projectRoot)'
-        includeRootFolder: false
-        archiveType: zip
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-        replaceExistingArchive: true
-
-    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-      displayName: 'Upload package'
-      artifact: drop
+      - script: |
+         npm install react-scripts
+         npm run build
+      - task: CopyFiles@2
+        displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+        inputs:
+          SourceFolder: '$(System.DefaultWorkingDirectory)/build'
+          TargetFolder: '$(Build.ArtifactStagingDirectory)'
+      - task: PublishPipelineArtifact@1
+        inputs:
+          targetPath: $(System.DefaultWorkingDirectory)/build
+          artifact: 'drop'
+          publishLocation: 'pipeline'
+- stage: Deploy_Staging
+  displayName: Deploy staging
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - deployment: Deploy
+    displayName: Deploy staging
+    environment: $(environmentName)
+    strategy:
+      runOnce:
+        deploy:
+            steps:            
+              - task: AzureRmWebAppDeployment@4
+                inputs:
+                  ConnectionType: 'AzureRM'
+                  azureSubscription: $(azureServiceConnectionName)
+                  appType: 'webAppLinux'
+                  WebAppName: $(webAppName)
+                  packageForLinux: $(Pipeline.Workspace)/drop
+                  RuntimeStack: 'NODE|lts'

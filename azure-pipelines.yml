@@ -64,7 +64,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: testchat'
             inputs:
-              azureSubscription: $(azureSubscription)
+              azureSubscription: $(azureServiceConnectionName)
               appType: webAppLinux
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip

@@ -12,48 +12,60 @@ variables:
   # Environment name
   environmentName: 'testchat'
 
-   # Agent VM image name
+  # Agent VM image name
   vmImageName: 'ubuntu-latest'
-  System.Debug: true
+
 stages:
 - stage: Build
   displayName: Build stage
-  pool:
-    vmImage: $(vmImageName)
-  jobs:  
-  - job: Build_Staging
-    displayName: Build Staging
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+
     steps:
-      - script: |
-         npm install react-scripts
-         npm run build
-      - task: CopyFiles@2
-        displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-        inputs:
-          SourceFolder: '$(System.DefaultWorkingDirectory)/build'
-          TargetFolder: '$(Build.ArtifactStagingDirectory)'
-      - task: PublishPipelineArtifact@1
-        inputs:
-          targetPath: $(System.DefaultWorkingDirectory)/build
-          artifact: 'drop'
-          publishLocation: 'pipeline'
-- stage: Deploy_Staging
-  displayName: Deploy staging
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '14.x'
+      displayName: 'Install Node.js'
+      
+    - script: |
+        npm install
+        npm run build --if-present
+      displayName: 'npm install and build'
+
+    - task: ArchiveFiles@2
+      displayName: 'Archive files'
+      inputs:
+        rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build/'
+        includeRootFolder: false
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true
+
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      artifact: drop
+
+- stage: Deploy
+  displayName: Deploy stage
   dependsOn: Build
   condition: succeeded()
   jobs:
   - deployment: Deploy
-    displayName: Deploy staging
+    displayName: Deploy
     environment: $(environmentName)
+    pool:
+      vmImage: $(vmImageName)
     strategy:
       runOnce:
         deploy:
-            steps:            
-              - task: AzureRmWebAppDeployment@4
-                inputs:
-                  ConnectionType: 'AzureRM'
-                  azureSubscription: $(azureServiceConnectionName)
-                  appType: 'webAppLinux'
-                  WebAppName: $(webAppName)
-                  packageForLinux: $(Pipeline.Workspace)/drop
-                  RuntimeStack: 'NODE |18-lts'
+          steps:
+          - task: AzureWebApp@1
+            displayName: 'Azure Web App Deploy: testchat'
+            inputs:
+              azureSubscription: $(azureSubscription)
+              appType: webAppLinux
+              appName: $(webAppName)
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              startUpCommand: 'pm2 serve /home/site/wwwroot --spa --no-daemon'

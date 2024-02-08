@@ -3,16 +3,16 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionName: 'chatfe1'
+  azureServiceConnectionName: 'testchat'
 
   # Web app name
-  webAppName: 'chatdesk'
+  webAppName: 'nnpcfe'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'chatbot_ui'
+  environmentName: 'testchat'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -67,7 +67,7 @@ stages:
             displayName: 'Use node version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : chatbot_ui'
+            displayName: 'Deploy Azure Web App : testchat'
             inputs:
               azureSubscription: $(azureServiceConnectionName)
               appName: $(webAppName)

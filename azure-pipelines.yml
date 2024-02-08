@@ -56,4 +56,4 @@ stages:
                   appType: 'webAppLinux'
                   WebAppName: $(webAppName)
                   packageForLinux: $(Pipeline.Workspace)/drop
-                  RuntimeStack: 'NODE|lts'
+                  RuntimeStack: 'NODE |18-lts'

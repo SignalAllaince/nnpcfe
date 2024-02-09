@@ -4,7 +4,7 @@ trigger:
 variables:
   azureServiceConnectionName: 'chatfe1'
   webAppName: 'chatdesk'
-  environmentName: 'chatbot_ui'
+  environmentName: 'chatdesk'
   vmImageName: 'ubuntu-latest'
   projectRoot: $(System.DefaultWorkingDirectory)
 
@@ -54,7 +54,7 @@ stages:
             deploy:
               steps:
                 - task: AzureWebApp@1
-                  displayName: 'Azure Web App Deploy: chatbot_ui'
+                  displayName: 'Azure Web App Deploy: chatdesk'
                   inputs:
                     azureSubscription: $(azureServiceConnectionName)
                     appType: webAppLinux

@@ -1,0 +1,188 @@
+
+.nav-header-contents{
+    
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #1a2f3e;
+  justify-content: space-around;
+  align-items: center;
+  padding:0px;
+  backdrop-filter: blur(12px);
+}
+
+.nav-p{
+  color:white;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.80px;
+}
+.navs-nnpc-logo{
+  width: 131px;
+  height: 72px;
+}
+.chat-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 19px;
+    
+  
+    
+}
+.chat-inputs-2{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: white;
+    margin-left: 0px;
+    margin-top: -7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+.chat-inputs-btn{
+    border-radius: 56px;
+    background-color: white;
+    padding: 10px;
+    width: 130px;
+    color: #1a2f3e;
+    text-transform: uppercase;
+    border: none;
+}
+.chat-inputs-placeholder{
+    border: none;
+    outline: none;
+    width: 800px;
+    padding: 15px;
+    background-color:white;
+    color: black;
+    
+}
+.chat-inputs-placeholder::placeholder {
+  color: black;
+}
+.chat-container {
+    height: calc(44vh - -70px);
+    overflow-y: auto;
+    padding: 20px;
+    margin-top: 0px;
+    margin-top: 97px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  
+  .chat-message {
+    margin-bottom: 20px;
+  }
+
+  .user-message{
+    width: fit-content;
+    max-width: 400px;
+    font-size: 15px;
+    padding: 16px 16px 8px 16px;
+    gap: 10px;
+    border-radius: 0px 8px 8px 8px;
+    background: #6f6f6f;
+    margin-right: 140px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    word-wrap: break-word;
+    color: white;
+    text-align: left;
+    line-height: 20px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+
+  }
+  
+  .bot-loading-message {
+    overflow: hidden; 
+    opacity: 0; 
+    animation: bounceFade 1s infinite;
+  }
+  
+  @keyframes bounceFade {
+    0%, 100% {
+      opacity: 0; 
+      transform: translateY(0); 
+    }
+    50% {
+      opacity: 1; 
+      transform: translateY(-10px); 
+    }
+  }
+  
+
+  .bot-message{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    align-items: start;
+    max-width: 60%;
+    width:  fit-content;
+    gap: 10px;
+    border-radius: 10px;
+    background: white;
+    margin-left: 157px;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: left;
+    letter-spacing: 1px;
+    
+  }
+  .chat-navs-btn{
+    padding: 10px;
+    color: black;
+    background-color:white;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    
+    
+  }
+  .dropdown-content{
+    margin-top: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+
+  /* @media (max-width: 475px){
+    .nav-p{
+      display: none;
+    }
+    .navs-nnpc-logo{
+      width: 100.4px;
+    height: 60px;
+    margin-left: 10px;
+    }
+    .desk{
+      color:white;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.80px;
+    }
+  } */
+ 

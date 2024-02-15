@@ -53,7 +53,7 @@ const Lightmode = ({handleFun}) => {
 
         <div className='home-middle-third'>
         <p className='home-middle-third-text'> 
-          How may I be of service to you?
+          How can i help you?
         </p>
         
         <button className='login-btn' onClick={handleFun}>
@@ -69,7 +69,7 @@ const Lightmode = ({handleFun}) => {
         <div className='h-d'>
         <div className='home-down'>
             <img className='home-down-icon' src={logo6} alt="" srcset="" />
-            <p className='home-down-p1'>Experience Seamless Support with NNPC AI Service Desk</p>
+            <p className='home-down-p1'>Seamless Support with NNPC AI Service Desk</p>
             <p className='home-down-p2'>An advanced application meticulously crafted to transform your internal support system. Embrace a new era of service management.</p>
         </div>
         <div className='home-down2'>

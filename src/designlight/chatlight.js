@@ -152,7 +152,7 @@ const Chatlight = ({ handleOut, userEmail }) => {
     
       const headers = { 'Content-Type': 'application/json', 'Email': userEmail };
       console.log(headers);
-      const response = await fetch('https://sdesknew.azurewebsites.net/bot', {
+      const response = await fetch('https://servicesdesk1.azurewebsites.net/bot', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(requestBody),

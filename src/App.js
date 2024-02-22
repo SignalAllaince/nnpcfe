@@ -10,7 +10,7 @@ import Chatlight from './designlight/chatlight';
 
 
 const WrappedView = () => {
-  const { instance } = useMsal();
+  const { instance, accounts } = useMsal();
   const activeAccount = instance.getActiveAccount();
   const [userEmail, setUserEmail] = useState('');
 
@@ -18,11 +18,12 @@ const WrappedView = () => {
     instance
       .loginRedirect({
         ...loginRequest,
+        account : accounts[0],
         prompt: 'create',
       })
       .catch((error) => console.log(error));
   };
-
+  console.log(accounts)
   const handleLogout = () => instance.logout();
   // useEffect(() => {
   //   const fetchUserData = async () => {
@@ -52,10 +53,13 @@ const WrappedView = () => {
   //   fetchUserData();
   // }, [instance]);
   
-  // const Vname = `${activeAccount?.username}`;
+  // const Vname = `${activeAccount?.username}`;  this is for the useremail showing
 
-  const Vname = `${activeAccount?.username}`;
 
+  const Vname = activeAccount ? activeAccount.name.split(' ').slice(0, 2).join(' ') : '';
+  // const Vname = activeAccount ? activeAccount.name.split(' ')[0] : ''; FOR ONLY FIRST NAME
+
+  // const UName = `${accounts[0].name}` THIS IS FOR THE FULL NAME SHWOING
 
   return (
     <div className="App">

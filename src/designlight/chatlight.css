@@ -1,4 +1,6 @@
-
+body{
+  background-color: #d9d9d9;
+}
 .nav-header-contents{
     
   position: fixed;
@@ -6,7 +8,7 @@
   width: 100%;
   display: flex;
   background-color: #1a2f3e;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding:0px;
   backdrop-filter: blur(12px);
@@ -14,14 +16,16 @@
 
 .nav-p{
   color:white;
-  font-size: 30px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.80px;
+  
 }
 .navs-nnpc-logo{
   width: 131px;
   height: 72px;
+  margin-left: 40px;
 }
 
 .chat-navs-btn{
@@ -37,23 +41,44 @@
   font-weight: 600;
 }
 .welcome{
-  color: white;
-  margin-top: 3px;
+  color:white ;
+  margin-top: 10px;
   margin-bottom: 3px;
-  font-size: 18px;
-  font-weight: 600;
- 
-
+  font-size: 15px;
+  font-weight: 500;
+  /* background-color: white; */
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  
 }
-/* .dropdown-content{
-  margin-top: 5px;
+.nazz{
+  display: flex;
+}
+.nazz-dots{
+  background-color: #1a2f3e;
+  border: none;
+  color: white;
+  font-size: 30px;
+  margin-top: 15px;
+}
+.dropdown {
+  position: relative; 
+}
+
+.dropdown-content {
+  position: absolute; 
+  top: calc(100% + 5px); 
+  right: 12px; 
   background-color: white;
-  color: black;
+  color: #1a2f3e;
   cursor: pointer;
   border: none;
+  padding: 10px;
   border-radius: 5px;
-  font-size: 20px;
-} */
+  font-size: 15px;
+}
+
 
 
 
@@ -112,7 +137,12 @@
     flex-direction: column;
   }
 
-
+  .formatted-message {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 5px;
+    margin: 5px 0;
+  }
   
   .chat-message {
     margin-bottom: 20px;
@@ -128,6 +158,7 @@
     background: 
     #226845;
     margin-right: 140px;
+    text-align: justify;
     margin-left: auto;
     margin-bottom: 10px;
     border-radius: 10px;

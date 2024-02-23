@@ -8,7 +8,7 @@ console.log(encoded_url);
 
 export const msalConfig = {
     auth: {
-        clientId: "739aa5f6-9354-4daa-8509-f56f1974f582 ",
+        clientId: "739aa5f6-9354-4daa-8509-f56f1974f582",
         authority: "https://login.microsoftonline.com/c9bfec4a-5ccc-4996-bf58-9401877a9892",
         redirectUri: '/',
         postLogoutRedirectUri: '/',

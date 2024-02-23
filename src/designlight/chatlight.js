@@ -135,7 +135,7 @@ import "@fontsource/montserrat";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
 import { HiEllipsisVertical } from "react-icons/hi2";
 
-const Chatlight = ({ handleOut, userEmail,}) => {
+const Chatlight = ({ handleOut,userName, userEmail,}) => {
   const [messages, setMessages] = useState([]);
   const chatContainerRef = useRef(null);
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -150,7 +150,7 @@ const Chatlight = ({ handleOut, userEmail,}) => {
   }, [messages]);
 
   const sendWelcomeMessage = () => {
-    const welcomeMessage = `Welcome ${userEmail}, how may I help you?`;
+    const welcomeMessage = `Welcome ${userName}, how may I help you?`;
     const botReply = { type: 'bot', text: welcomeMessage };
     setMessages(prevMessages => [...prevMessages, botReply]);
   };
@@ -167,7 +167,7 @@ const Chatlight = ({ handleOut, userEmail,}) => {
     
       const headers = { 'Content-Type': 'application/json', 'Email': userEmail };
       console.log(headers);
-      const response = await fetch('https://servicesdesk1.azurewebsites.net/bot', {
+      const response = await fetch('https://nnpchelpdeskbe.azurewebsites.net/', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(requestBody),
@@ -201,12 +201,14 @@ const Chatlight = ({ handleOut, userEmail,}) => {
     <section style={{background: '#d9d9d9', height: '82.2vh'}}>
       <div className='nav-header-contents'>
         <div>
-          <p className='nav-p'>
+        <p className='nav-p'>
             SERVICE DESK
           </p>
+          
         </div>
         <div>
-          <img className='navs-nnpc-logo' src={logo5} alt="" srcset="" />
+        <img className='navs-nnpc-logo' src={logo5} alt="" srcset="" />
+        
         </div>
         <div className=''> 
         <p className='welcome'> {`Welcome ${userEmail}`}</p>

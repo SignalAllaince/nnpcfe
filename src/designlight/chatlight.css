@@ -176,10 +176,11 @@
     margin-left: 157px;
     margin-right: auto;
     margin-top: 10px;
-    text-align: left;
+    text-align: justify;
     letter-spacing: 1px;
     
   }
+
   
 
   @media (min-width:200px) and (max-width:474px){
@@ -323,7 +324,7 @@
     
   
     .bot-message{
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
       color: black;
       padding: 10px;
       font-size: 12px;

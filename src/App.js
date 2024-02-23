@@ -53,7 +53,8 @@ const WrappedView = () => {
   //   fetchUserData();
   // }, [instance]);
   
-  // const Vname = `${activeAccount?.username}`;  this is for the useremail showing
+   const Ename = `${activeAccount?.username}`;  
+  //  this is for the useremail showing
 
 
   const Vname = activeAccount ? activeAccount.name.split(' ').slice(0, 2).join(' ') : '';
@@ -65,7 +66,7 @@ const WrappedView = () => {
     <div className="App">
       <AuthenticatedTemplate>
         {activeAccount ? (
-          <Chatlight handleOut={handleLogout} userEmail={Vname} />
+          <Chatlight handleOut={handleLogout} userName={Vname} userEmail={Ename} />
         ) : null}
       </AuthenticatedTemplate>
 

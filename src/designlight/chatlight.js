@@ -11,19 +11,32 @@ const Chatlight = ({ handleOut,userName, userEmail,}) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const inputRef = useRef(null);
 
-  useEffect(() => {
-    sendWelcomeMessage();
-  }, []);
+  // useEffect(() => {
+  //   sendWelcomeMessage();
+  // }, []);
+  // useEffect(() => {
+  //   sendAdditionalMessage();
+  // }, []);
 
   useEffect(() => {
     chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
   }, [messages]);
 
-  const sendWelcomeMessage = () => {
-    const welcomeMessage = `Welcome, ${userName}, how may I help you?`;
-    const botReply = { type: 'bot', text: welcomeMessage };
-    setMessages(prevMessages => [...prevMessages, botReply]);
-  };
+  useEffect(() => {
+    sendMessages();
+}, []);
+
+const sendMessages = () => {
+    const welcomeMessage = `Welcome, ${userName}, I am INEO service desk assitant.`;
+    const additionalMessage = `Do you need information, want to log a service request, or report an incident?`;
+    
+    const botReplies = [
+        { type: 'bot', text: welcomeMessage },
+        { type: 'bot', text: additionalMessage }
+    ];
+
+    setMessages(prevMessages => [...prevMessages, ...botReplies]);
+};
 
   const handleSendMessage = async () => {
     const currentMessage = inputRef.current.value.trim();

@@ -40,7 +40,7 @@ const sendMessages = () => {
       setMessages(prevMessages => [...prevMessages, botReplyLoading]);
       const headers = { 'Content-Type': 'application/json', 'Email': userEmail };
       console.log(headers);
-      const response = await fetch('https://nnpchelpdeskbe.azurewebsites.net/bot', {
+      const response = await fetch('https://localhost:8000/bot', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(requestBody),

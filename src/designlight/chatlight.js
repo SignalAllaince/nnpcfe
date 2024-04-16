@@ -10,14 +10,6 @@ const Chatlight = ({ handleOut,userName, userEmail,}) => {
   const chatContainerRef = useRef(null);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const inputRef = useRef(null);
-
-  // useEffect(() => {
-  //   sendWelcomeMessage();
-  // }, []);
-  // useEffect(() => {
-  //   sendAdditionalMessage();
-  // }, []);
-
   useEffect(() => {
     chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
   }, [messages]);
@@ -40,14 +32,12 @@ const sendMessages = () => {
 
   const handleSendMessage = async () => {
     const currentMessage = inputRef.current.value.trim();
-
     const userMessage = { type: 'user', text: currentMessage };
     setMessages(prevMessages => [...prevMessages, userMessage]);
     try {
       const requestBody = { user: currentMessage };
       const botReplyLoading = { type: 'bot', text: 'Generating reply...', loading: true };
       setMessages(prevMessages => [...prevMessages, botReplyLoading]);
-    
       const headers = { 'Content-Type': 'application/json', 'Email': userEmail };
       console.log(headers);
       const response = await fetch('https://nnpchelpdeskbe.azurewebsites.net/bot', {
@@ -56,7 +46,6 @@ const sendMessages = () => {
         body: JSON.stringify(requestBody),
       });
       
-    
       const data = await response.json();
      
       const zemp = data.response.replace('Uchenna Nnamani', userName)
@@ -92,16 +81,9 @@ const sendMessages = () => {
         <p className='nav-p'>
             INEO
           </p>
-        
-        
         </div>
         <div className='nazz'> 
         <p className='welcome'>Hi, {`${userEmail}`}</p>
-        {/* <button className='chat-navs-btn' onClick={handleOut}>
-            Logout
-          </button> */}
-          
-
            <div className='dropdown'>
         <button className='nazz-dots' onClick={toggleDropdown}>
               <HiEllipsisVertical />

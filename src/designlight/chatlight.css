@@ -61,6 +61,7 @@ body{
   color: white;
   font-size: 30px;
   margin-top: 15px;
+  cursor: pointer;
 }
 .dropdown {
   position: relative; 
@@ -77,6 +78,10 @@ body{
   padding: 10px;
   border-radius: 5px;
   font-size: 15px;
+}
+.dropdown-content:hover{
+  background-color: #1a2f3e;
+  color: white;
 }
 
 
@@ -132,7 +137,7 @@ body{
     overflow-y: auto;
     padding: 20px;
     margin-top: 0px;
-    margin-top: 97px;
+    margin-top: 77px;
     display: flex;
     flex-direction: column;
   }
@@ -215,11 +220,8 @@ body{
   
 
   @media (min-width:200px) and (max-width:474px){
-    body{
-      background-color: #d9d9d9;
-    }
+    
     .nav-p{
-      color:white;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
@@ -428,9 +430,7 @@ body{
  
 
   @media (min-width:496px) and (max-width:600px){
-    body{
-      background-color: #d9d9d9;
-    }
+    
     .formatted-message {
       word-wrap: break-word;
       white-space: pre-wrap;
@@ -439,153 +439,78 @@ body{
     }
 
     .welcome{
-      color:white;
       margin-top: 10px;
       margin-right: -10px;
       font-size: 12px;
       font-weight: 500;
-      /* background-color: white; */
-      border-radius: 5px;
-      border: none;
-      padding: 10px;
-      
     }
-    .nazz{
+    /* .nazz{
       display: flex;
-    }
+    } */
     .nazz-dots{
-      background-color: #1a2f3e;
-      border: none;
-      color: white;
       font-size: 20px;
       margin-top: 18px;
-    }
-    .dropdown {
-      position: relative; 
+      cursor: pointer;
     }
     
     .dropdown-content {
       position: absolute; 
-      top: calc(100% + 5px); 
+      top: calc(100% + 9px); 
       right: 12px; 
-      background-color: white;
-      color: #1a2f3e;
-      cursor: pointer;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 15px;
+      padding: 5px;
+      font-size: 12px;
     }
     .nav-p{
-      color:white;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 0.80px;
-  margin-top: 20px;
-  margin-left: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.80px;
+      margin-top: 20px;
+      margin-left: 30px;
     }
-    .chat-navs-btn{
-  
-      color: white;
-      background-color:#1a2f3e;
-      cursor: pointer;
-      padding: 1px 1px;
-      border: none;
-      font-size: 16px;
-      font-family: 'montserrat';
-      letter-spacing: 0.3px;
-      font-weight: 500;
-    }
+    
    
     .navs-nnpc-logo{
       width: 100.4px;
     height: 60px;
     margin-left: 10px;
     }
-    
-    .chat-inputs{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin-top: 19px;
-      
-    
-      
-  }
   .chat-inputs-2{
-      display: flex;
-      justify-content: space-between;
       width: 400px;
       padding: 10px;
-      align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      background: white;
       margin-left: 0px;
       margin-top: -7px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       
   }
-  .chat-inputs-btn{
-      border-radius: 56px;
-      background-color: white;
-      padding: 10px;
-      width: 130px;
-      color: #1a2f3e;
-      text-transform: uppercase;
-      border: none;
-  }
+  
   .chat-inputs-placeholder{
-      border: none;
-      outline: none;
-      width: 800px;
+      width: 900px;
       padding: 15px;
-      background-color:white;
-      color: black;
-      
+    
   }
   .chat-inputs-placeholder::placeholder {
     color: black;
   }
   .chat-container {
-      height: calc(44vh - -70px);
-      overflow-y: auto;
-      padding: 20px;
       margin-top: 0px;
-      margin-top: 97px;
-      display: flex;
-      flex-direction: column;
+      margin-top: 66px;
     }
-  
-  
-    
     .chat-message {
       margin-bottom: 20px;
     }
   
     .user-message{
-      width: fit-content;
-      max-width: 400px;
+      max-width: 250px;
       font-size: 14px;
       padding: 16px 16px 8px 16px;
-      gap: 10px;
-      border-radius: 0px 8px 8px 8px;
-      background: #6f6f6f;
       margin-right: 28px;
       margin-left: auto;
       margin-bottom: 10px;
-      border-radius: 10px;
       padding: 20px;
-      word-wrap: break-word;
-      color: white;
-      text-align: left;
       line-height: 20px;
       font-weight: 500;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      
-  
+      letter-spacing: 1px;
+      text-align: justify;
+
     }
     
     .bot-loading-message {
@@ -594,27 +519,14 @@ body{
       animation: bounceFade 1s infinite;
     }
     
-    @keyframes bounceFade {
-      0%, 100% {
-        opacity: 0; 
-        transform: translateY(0); 
-      }
-      50% {
-        opacity: 1; 
-        transform: translateY(-10px); 
-      }
-    }
-    
   
     .bot-message{
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      color: black;
       padding: 20px;
       font-size: 14px;
       font-weight: 500;
       line-height: 20px;
-      align-items: start;
-      max-width: 60%;
+      /* align-items: start; */
+      max-width: 65%;
       width:  fit-content;
       gap: 10px;
       border-radius: 10px;
@@ -630,9 +542,6 @@ body{
   }
 
   @media (min-width:600px) and (max-width:765px){
-    body{
-      background-color: #d9d9d9;
-    }
     .formatted-message {
       word-wrap: break-word;
       white-space: pre-wrap;
@@ -640,47 +549,22 @@ body{
       margin: 5px 0;
     }
     .nav-p{
-      color:white;
   font-size: 17px;
   margin-top: 25px;
   margin-left: 30px;
-  font-style: normal;
   font-weight: 600;
   letter-spacing: 0.80px;
     }
-    .chat-navs-btn{
-  
-      color: white;
-      background-color:#1a2f3e;
-      cursor: pointer;
-      padding: 1px 1px;
-      border: none;
-      font-size: 17px;
-      font-family: 'montserrat';
-      letter-spacing: 0.3px;
-      font-weight: 500;
-    }
     .welcome{
-      color:white;
       margin-top: 10px;
       margin-right: -10px;
-      font-size: 13px;
-      font-weight: 500;
-      /* background-color: white; */
-      border-radius: 5px;
-      border: none;
-      padding: 10px;
-      
+      font-size: 12px;
+      font-weight: 500; 
     }
-    .nazz{
-      display: flex;
-    }
+  
     .nazz-dots{
-      background-color: #1a2f3e;
-      border: none;
-      color: white;
       font-size: 20px;
-      margin-top: 18px;
+      margin-top: 16px;
     }
     .dropdown {
       position: relative; 
@@ -688,151 +572,67 @@ body{
     
     .dropdown-content {
       position: absolute; 
-      top: calc(100% + 5px); 
+      top: calc(100% + 9px); 
       right: 12px; 
-      background-color: white;
-      color: #1a2f3e;
-      cursor: pointer;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 15px;
+      padding: 6px;
+      font-size: 12px;
     }
+    
     .navs-nnpc-logo{
       width: 100.4px;
     height: 60px;
     margin-left: 10px;
     }
     
-    .chat-inputs{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin-top: 19px;
-      
-    
-      
-  }
+  
   .chat-inputs-2{
-      display: flex;
-      justify-content: space-between;
       width: 520px;
       padding: 10px;
       align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      background: white;
       margin-left: 0px;
       margin-top: -7px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      
   }
   .chat-inputs-btn{
-      border-radius: 56px;
-      background-color: white;
       padding: 10px;
       width: 130px;
-      color: #1a2f3e;
-      text-transform: uppercase;
-      border: none;
   }
   .chat-inputs-placeholder{
-      border: none;
-      outline: none;
       width: 800px;
       padding: 15px;
-      background-color:white;
-      color: black;
-      
   }
-  .chat-inputs-placeholder::placeholder {
-    color: black;
-  }
+  
   .chat-container {
-      height: calc(44vh - -70px);
-      overflow-y: auto;
-      padding: 20px;
-      margin-top: 0px;
-      margin-top: 97px;
-      display: flex;
-      flex-direction: column;
-    }
-  
-  
-    
-    .chat-message {
-      margin-bottom: 20px;
+      
+      margin-top: 65px;
+      
     }
   
     .user-message{
       width: fit-content;
-      max-width: 400px;
+      max-width: 300px;
       font-size: 14px;
-      padding: 16px 16px 8px 16px;
-      gap: 10px;
-      border-radius: 0px 8px 8px 8px;
-      background: #226845;
       margin-right: 28px;
-      margin-left: auto;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      padding: 20px;
-      word-wrap: break-word;
-      color: white;
-      text-align: left;
+      text-align: justify;
       line-height: 20px;
       font-weight: 500;
-      text-align: justify;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      
-  
     }
     
-    .bot-loading-message {
-      overflow: hidden; 
-      opacity: 0; 
-      animation: bounceFade 1s infinite;
-    }
-    
-    @keyframes bounceFade {
-      0%, 100% {
-        opacity: 0; 
-        transform: translateY(0); 
-      }
-      50% {
-        opacity: 1; 
-        transform: translateY(-10px); 
-      }
-    }
     
   
     .bot-message{
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      color: black;
-      padding: 20px;
+     
       font-size: 14px;
       font-weight: 500;
       line-height: 20px;
-      align-items: start;
       max-width: 60%;
-      width:  fit-content;
-      gap: 10px;
-      border-radius: 10px;
-      background: white;
       margin-left: 28px;
-      margin-right: auto;
-      margin-top: 10px;
-      text-align: left;
       text-align: justify;
       letter-spacing: 1px;
       
     }
   }
-  @media (min-width:768px) and (max-width:992px){
-    body{
-      background-color: #d9d9d9;
-    }
+  @media (min-width:766px) and (max-width:992px){
+    
     .formatted-message {
       word-wrap: break-word;
       white-space: pre-wrap;
@@ -840,129 +640,56 @@ body{
       margin: 5px 0;
     }
     .welcome{
-      color:white;
       margin-top: 16px;
       margin-right: -10px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
-      /* background-color: white; */
-      border-radius: 5px;
-      border: none;
-      padding: 10px;
-      
     }
-    .nazz{
-      display: flex;
-    }
+    
     .nazz-dots{
-      background-color: #1a2f3e;
-      border: none;
-      color: white;
       font-size: 25px;
       margin-top: 23px;
     }
-    .dropdown {
-      position: relative; 
-    }
-    
     .dropdown-content {
       position: absolute; 
-      top: calc(100% + 8px); 
+      top: calc(100% + 9px); 
       right: 12px; 
-      background-color: white;
-      color: #1a2f3e;
-      cursor: pointer;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 15px;
+      padding: 5px;
+      font-size: 12px;
     }
     .nav-p{
-      color:white;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 600;
-  margin-top: 29px;
-  letter-spacing: 0.80px;
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 29px;
+    letter-spacing: 0.80px;
   }
-  .chat-navs-btn{
   
-    color: white;
-    background-color:#1a2f3e;
-    cursor: pointer;
-    padding: 1px 1px;
-    border: none;
-    font-size: 18px;
-    font-family: 'montserrat';
-    letter-spacing: 0.3px;
-    font-weight: 500;
-  }
   
   .chat-inputs-2{
-    display: flex;
-    justify-content: space-between;
     width: 600px;
     padding: 10px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    background: white;
     margin-left: 0px;
     margin-top: -7px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
 }
 
-  
-.chat-message {
-  margin-bottom: 20px;
-}
 
 .user-message{
   width: fit-content;
   max-width: 400px;
-  font-size: 15px;
-  padding: 16px 16px 8px 16px;
-  gap: 10px;
-  border-radius: 0px 8px 8px 8px;
-  background: #226845;
+  font-size: 14px;
+  
+  
   margin-right: 40px;
-  margin-left: auto;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 20px;
-  word-wrap: break-word;
-  color: white;
-  text-align: left;
+ 
   text-align: justify;
   line-height: 20px;
   font-weight: 500;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  
+  letter-spacing: 1px;
 
-}
-
-.bot-loading-message {
-  overflow: hidden; 
-  opacity: 0; 
-  animation: bounceFade 1s infinite;
-}
-
-@keyframes bounceFade {
-  0%, 100% {
-    opacity: 0; 
-    transform: translateY(0); 
-  }
-  50% {
-    opacity: 1; 
-    transform: translateY(-10px); 
-  }
 }
 
 
 .bot-message{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  color: black;
   padding: 20px;
   font-size: 15px;
   font-weight: 500;

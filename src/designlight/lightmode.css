@@ -8,11 +8,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 body{
-    font-family: "Montserrat";
+    font-family: "Arial";
     
 }
 
-.bt{
+/* .bt{
     background-color: white;
     border: none;
     border-radius: 10px;
@@ -26,29 +26,22 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: white;
     color: #1a2f3e;
-}
-
-/* .nav-header-content{
-    
-        position: fixed;
-        top: 0;
-        width: 100%;
-        display: flex;
-        background-color: #1a2f3e;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px;
-        backdrop-filter: blur(12px);
 } */
+/* .nav-icons{
+    width: 5px;
+    height: 10px;
+    display: flex;
+    gap: 15px;
+} */
+
 .nav-header-content {
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     background-color: #1a2f3e;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
     z-index: 1000;
     
 
@@ -58,14 +51,10 @@ body{
     width: 131.4px;
     height: 72px;
     flex-shrink: 0;
-    margin-left: 120px;
+    margin-left: 30px;
+    
 }
-.nav-icons{
-    width: 5px;
-    height: 10px;
-    display: flex;
-    gap: 15px;
-}
+
 
 .nav-btn{
     color: #1a2f3e;
@@ -81,10 +70,11 @@ body{
     width: 170px;
     border: none;
     cursor: pointer;
+    margin-right: 30px;
 }
 .nav-btn:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
+    background-color: #56656f;
     color: white;
     
 }
@@ -107,7 +97,7 @@ body{
 
 .login-btn:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
+    background-color:#56656f;
     color: white;
 }
 
@@ -117,6 +107,7 @@ body{
     background-size: cover;
     background-position: center;
     position: relative;
+    
    
 }
 
@@ -142,7 +133,6 @@ body{
 .home-middle-first-text{
     color: white;
     text-align: center;
-    
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
@@ -178,7 +168,7 @@ body{
     font-size: 17px;
     font-style: normal;
     font-weight: 500;
-    line-height: 140%; /* 26.6px */
+    line-height: 140%;
     margin-left: 20px;
 }
 
@@ -233,7 +223,7 @@ text-align: center;
 font-size: 17px;
 font-style: normal;
 font-weight: 600;
-line-height: 29px; /* 116% */
+line-height: 29px; 
 margin-bottom: -20px;
 }
 .home-down-p2{
@@ -260,260 +250,63 @@ line-height: 24px; /* 150% */
 
 .footer{
     background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
-    backdrop-filter: blur(20px);
-    color: #ECECEC;
+    /* backdrop-filter: blur(20px); */
+    color: white;
     text-align: center;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; 
     margin-bottom: -20px;
+    margin-top: 70px;
 }
 
 /* MEDIA QUERIES */
-@media (min-width:200px) and (max-width:475px) {
+@media (min-width:300px) and (max-width:475px) {
    
-    .nav-header-content{
-        position: fixed;
-        top: 0;
-        display: flex;
-        background-color: #1a2f3e;
-        justify-content: space-around;
-        align-items: center;
-        padding: 5px;
-        backdrop-filter: blur(12px);
-}
-.nav-icons{
-    display: flex;
-    gap: 0px;
-    margin-left: -9px;
-}
-
-.bt2{
-   width: 20px;
-
-   
-}
-.nav-nnpc-logo{
-    width: 100.4px;
-    height: 60px;
-    margin-left: 120px;
-
-}
-.nav-btn{
-    color: #1a2f3e;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; 
-    letter-spacing: 0.16px;
-    text-transform: uppercase;
-    border-radius: 20px;
-    background: white;
-    padding: 8px;
-    width: 100px;
-    border: none;
-    cursor: pointer;
-    margin-right: 7px;
-}
-.nav-btn:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
-    color: white;
-    
-}
-
-.home-middle{
-    align-items: center;
-    gap: 48px;
-    justify-content: center;
-}
-.home-middle-first-text{
-    color: white;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 30px;
-    letter-spacing: 0.5px;
-    margin-top: 110px;
-}
-.home-middle-second-text{
-    color: white;
-    text-align: center;
-    font-family: "montserrat";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 200%; 
-    margin-bottom: 0px;
-}
-.home-middle-third{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1 0 0;
-    border-radius: 56px;
-    background: #1a2f3e;
-    width:355px ;
-    margin-top: -25px;
-
-}
-
-.home-middle-third-text{
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%; /* 26.6px */
-    margin-left: 20px;
-}
-
-.login-btn{
-    color: #1a2f3e;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%;
-    letter-spacing: 0.16px;
-    text-transform: uppercase;
-    border-radius: 30px;
-    background: white;
-    padding: 10px;
-    width: 110px;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.login-btn:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
-    color: white;
-}
-
- .h-d {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.home-down
- {
-    flex-shrink: 0;
-    width: 297.33px;
-    height: 327px;
-    white-space: normal;
-    margin-left: 700px;
-}
-
-.home-down2
- {
-    flex-shrink: 0;
-    width: 269.33px;
-    height: 327px;
-    white-space: normal;
-}
-.home-down3{
-    flex-shrink: 0;
-    width: 297.33px;
-    height: 327px;
-    white-space: normal;
-    margin-right: 30px;
-} 
-
-
-
-
-.footer{
-    background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
-    backdrop-filter: blur(20px);
-    color: #ECECEC;
-    text-align: center;
-   
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%; 
-    margin-top: 140px;
-}
-
-
- }
-
-
-
-@media (min-width:496px) and (max-width:600px){
-    .nav-icons{
-        display: flex;
-        gap: 0px;
-        margin-left: -9px;
-    }
-    
-    .bt2{
-       width: 20px;
-    
-       
-    }
-
     .nav-btn{
-        color: #1a2f3e;
         font-size: 10px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%; /* 16px */
+        font-weight: 800;
         letter-spacing: 0.16px;
-        text-transform: uppercase;
-        border-radius: 56px;
-        background: white;
-        padding: 15px 5px;
-        width: 110px;
-        border: none;
-        cursor: pointer;
+        padding: 13px 3px;
+        width: 123px;
     }
-    -middle-third-text{
-        color:  white;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        margin-left: 20px;
+    .nav-nnpc-logo{
+        width: 120.4px;
+        height: 68px;
+        flex-shrink: 0;
+        margin-left: 25px;
+        
     }
+   
     .home-middle-third{
         width: 350px;
+        
     }
-    .login-btn{
-        color: #1a2f3e;
+    .home-middle-third-text{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 140%;
+        margin-left: 20px;
+    }
+     .login-btn{
         font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%; /* 16px */
+        line-height: 100%; 
         letter-spacing: 0.16px;
-        text-transform: uppercase;
-        border-radius: 56px;
-        background: white;
         padding: 7px;
         width: 100px;
-        border: none;
         margin-right: 10px;
-        cursor: pointer;
-    }
+    } 
     .home-middle-first-text{
-        color: white;
-        text-align: center;
-        font-size:30px;
-        font-weight: 500;
-        line-height: 40px;
+        font-size:35px;
+        line-height: 50px;
         letter-spacing: 0.5px;
-        margin-top: 150px;
     }
     .home-middle-second-text{
-        color: white;
-        text-align: center;
-        font-family: "montserrat";
+        font-family: "Arial";
         font-size: 12.5px;
-        font-style: normal;
         font-weight: 500;
-        line-height: 140%; 
-        margin-bottom: 0px;
+        line-height: 120%; 
     }
     
     .h-d {
@@ -523,7 +316,7 @@ line-height: 24px; /* 150% */
         -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
         scrollbar-width: none; /* Hides scrollbar for Firefox */
         -ms-overflow-style: none; /* Hides scrollbar for IE and Edge */
-        justify-content: flex-start; /* Aligns items to the start of the container */
+        justify-content: flex-start; 
         margin-left: 30px;
         margin-bottom: 100px;
     }
@@ -536,8 +329,8 @@ line-height: 24px; /* 150% */
     .home-down2,
     .home-down3 {
         flex-shrink: 0;
-        width: calc(45% - 50px); /* Adjust as needed */
-        margin-right: 20px; /* Adjust spacing between cards */
+        width: calc(45% - 50px); 
+        margin-right: 20px; 
     }
     .home-down-icon{
         width: 120.026px;
@@ -553,7 +346,7 @@ line-height: 24px; /* 150% */
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 29px; /* 116% */
+    line-height: 29px; 
     margin-bottom: -20px;
     }
     .home-down-p2{
@@ -563,7 +356,7 @@ line-height: 24px; /* 150% */
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 24px; 
     }
     
     
@@ -580,7 +373,116 @@ line-height: 24px; /* 150% */
         line-height: 140%; 
         margin-top: -61px;
     }
-    .bt{
+
+ }
+
+
+
+@media (min-width:496px) and (max-width:600px){
+    .nav-btn{
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.16px;
+        padding: 15px 5px;
+        width: 123px;
+    }
+   
+    .home-middle-third{
+        width: 350px;
+        
+    }
+    .home-middle-third-text{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 140%;
+        margin-left: 20px;
+    }
+     .login-btn{
+        font-size: 12px;
+        line-height: 100%; 
+        letter-spacing: 0.16px;
+        padding: 7px;
+        width: 100px;
+        margin-right: 10px;
+    } 
+    .home-middle-first-text{
+        font-size:40px;
+        line-height: 50px;
+        letter-spacing: 0.5px;
+    }
+    .home-middle-second-text{
+        font-family: "Arial";
+        font-size: 14.5px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; 
+    }
+    
+    .h-d {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+        scrollbar-width: none; /* Hides scrollbar for Firefox */
+        -ms-overflow-style: none; /* Hides scrollbar for IE and Edge */
+        justify-content: flex-start; 
+        margin-left: 30px;
+        margin-bottom: 100px;
+    }
+    
+    .h-d::-webkit-scrollbar {
+        display: none; /* Hides scrollbar for Chrome, Safari, and Opera */
+    }
+    
+    .home-down,
+    .home-down2,
+    .home-down3 {
+        flex-shrink: 0;
+        width: calc(45% - 50px); 
+        margin-right: 20px; 
+    }
+    .home-down-icon{
+        width: 120.026px;
+        height: 120.072px;
+        flex-shrink: 0;
+        margin-top: -10px;
+        margin-bottom: -50px;
+    }
+    .home-down-p1{
+        color: white;
+    text-align: center;
+    
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29px; 
+    margin-bottom: -20px;
+    }
+    .home-down-p2{
+        color: white;
+    text-align: center;
+    
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    }
+    
+    
+    
+    .footer{
+        background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
+        backdrop-filter: blur(20px);
+        color: #ECECEC;
+        text-align: center;
+       
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; 
+        margin-top: -61px;
+    }
+    /* .bt{
         background-color: white;
         border: none;
         border-radius: 10px;
@@ -590,52 +492,44 @@ line-height: 24px; /* 150% */
         background-color: #1a2f3e;
         color: white;
         
-    }
+    } */
 }
 @media (min-width:601px) and (max-width:768px){
-    .bt{
+    /* .bt{
         font-size: 15px;
         margin-left: -10px;
-    }
+    } */
     .home-middle-third-text{
-        color:  white;
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
-        
         margin-left: 20px;
     }
     .home-middle-third{
         width: 400px;
     }
     .login-btn{
-        color: #1a2f3e;
         font-size: 12px;
-        font-style: normal;
         font-weight: 600;
-        line-height: 100%; /* 16px */
+        line-height: 100%; 
         letter-spacing: 0.16px;
-        text-transform: uppercase;
-        border-radius: 56px;
-        background: white;
         padding: 10.8px;
-        width: 110px;
-        
+        width: 110px; 
     }
     .home-middle-first-text{
         color: white;
         text-align: center;
-        font-size:39px;
+        font-size:42px;
         font-weight: 500;
-        line-height: 48px;
+        line-height: 49px;
         letter-spacing: 0.5px;
         margin-top: 150px;
     }
     .home-middle-second-text{
         color: white;
         text-align: center;
-        font-family: "montserrat";
-        font-size: 14.5px;
+        font-family: "Arial";
+        font-size: 16.5px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%; 
@@ -831,7 +725,7 @@ line-height: 24px; /* 150% */
 
 @media (min-width:993px) and (max-width:1200px){
     
-.bt{
+/* .bt{
     background-color: white;
     border: none;
     border-radius: 10px;
@@ -845,7 +739,7 @@ line-height: 24px; /* 150% */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: white;
     color: #1a2f3e;
-}
+} */
 
 .nav-header-content{
     
@@ -854,45 +748,33 @@ line-height: 24px; /* 150% */
         width: 100%;
         display: flex;
         background-color: #1a2f3e;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 0px;
         backdrop-filter: blur(12px);
 }
 .nav-nnpc-logo{
     width: 131.4px;
     height: 72px;
     flex-shrink: 0;
-    margin-left: 120px;
+    
 }
-.nav-icons{
+/* .nav-icons{
     width: 5px;
     height: 10px;
     display: flex;
     gap: 15px;
-}
+} */
 
 .nav-btn{
-    color: #1a2f3e;
     font-size: 13px;
-    font-style: normal;
     font-weight: 600;
     line-height: 100%; /* 16px */
     letter-spacing: 0.16px;
-    text-transform: uppercase;
-    border-radius: 56px;
-    background: white;
     padding: 15px 5px;
     width: 170px;
-    border: none;
-    cursor: pointer;
 }
-.nav-btn:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
-    color: white;
-    
-}
+
 .login-btn{
     color: #1a2f3e;
     font-size: 13px;
@@ -910,11 +792,7 @@ line-height: 24px; /* 150% */
     cursor: pointer;
 }
 
-.login-btn:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
-    color: white;
-}
+
 .home-middle{
     display: flex;
     flex-direction: column;
@@ -923,8 +801,7 @@ line-height: 24px; /* 150% */
     justify-content: center;
 }
 .home-middle-first-text{
-    color: white;
-    text-align: center;
+    
     
     font-size: 60px;
     font-style: normal;
@@ -937,7 +814,6 @@ line-height: 24px; /* 150% */
 .home-middle-second-text{
     color: white;
     text-align: center;
-    font-family: "montserrat";
     font-size: 17px;
     font-style: normal;
     font-weight: 500;
@@ -962,9 +838,6 @@ line-height: 24px; /* 150% */
     line-height: 140%; /* 26.6px */
     margin-left: 20px;
 }
-/* .home-middles-third-text{
-    display: none;
-} */
 
 
 
@@ -1002,32 +875,8 @@ line-height: 24px; /* 150% */
     width: 297.33px;
     height: 297px;
 }
-.home-down-icon{
-    width: 150.026px;
-    height: 150.072px;
-    flex-shrink: 0;
-    margin-top: -10px;
-    margin-bottom: -50px;
-}
-.home-down-p1{
-    color: white;
-text-align: center;
 
-font-size: 17px;
-font-style: normal;
-font-weight: 600;
-line-height: 29px; /* 116% */
-margin-bottom: -20px;
-}
-.home-down-p2{
-    color: white;
-text-align: center;
 
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
-}
 .h-d{
     display: flex;
     gap: 20px;

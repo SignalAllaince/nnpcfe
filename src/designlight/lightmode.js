@@ -2,10 +2,10 @@
 
 import React from 'react';
 import './lightmode.css';
-import { FiFacebook } from "react-icons/fi";
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { CiYoutube } from "react-icons/ci";
+// import { FiFacebook } from "react-icons/fi";
+// import { FaInstagram } from "react-icons/fa";
+// import { FaXTwitter } from "react-icons/fa6";
+// import { CiYoutube } from "react-icons/ci";
 import logo5 from '../image/image2.png';
 import logo6 from '../image/icon1.png';
 import logo7 from '../image/icon2.png';
@@ -21,7 +21,7 @@ const Lightmode = ({ handleFun }) => {
     return (
         <section>
             <div className='nav-header-content'>
-                <div className='nav-icons'>
+                {/* <div className='nav-icons'>
                     <Link to="https://www.twitter.com/NNPClimited" target="_blank" rel="noopener noreferrer">
                         <button className='bt'> <FaXTwitter className='bt2' style={{ fontSize: '20px' }} /></button>
                     </Link>
@@ -34,7 +34,7 @@ const Lightmode = ({ handleFun }) => {
                     <Link to="https://www.youtube.com/@nnpclimited" target="_blank" rel="noopener noreferrer">
                         <button className='bt'><CiYoutube className='bt2' style={{ fontSize: '20px' }} /></button>
                     </Link>
-                </div>
+                </div> */}
                 <div>
                     <img className='nav-nnpc-logo' src={logo5} alt="" srcset="" />
                 </div>

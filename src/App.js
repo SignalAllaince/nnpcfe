@@ -25,33 +25,7 @@ const WrappedView = () => {
   };
   console.log(accounts)
   const handleLogout = () => instance.logout();
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     const token = instance.getActiveAccount()?.idToken;
-  
-  //     if (token) {
-  //       try {
-  //         const response = await axios.get('https://graph.microsoft.com/v1.0/me', {
-  //           headers: {
-  //             Authorization: `Bearer ${token}`,
-  //           },
-  //         });
-  
-  //         console.log('Microsoft Graph API Response:', response.data);
-  
-          
-  //         const decodedToken = instance.getAccountByHomeId(instance.getActiveAccount()?.homeAccountId)?.idTokenClaims;
-  //         console.log('Token Claims:', decodedToken);
-  
-  //         setUserEmail(response.data.mail);
-  //       } catch (error) {
-  //         console.error('Error fetching user information:', error);
-  //       }
-  //     }
-  //   };
-  
-  //   fetchUserData();
-  // }, [instance]);
+ 
   
    const Ename = `${activeAccount?.username}`;  
   //  this is for the useremail showing

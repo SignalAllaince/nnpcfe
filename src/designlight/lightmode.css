@@ -277,12 +277,10 @@ line-height: 24px; /* 150% */
         height: 68px;
         flex-shrink: 0;
         margin-left: 25px;
-        
     }
    
     .home-middle-third{
         width: 350px;
-        
     }
     .home-middle-third-text{
         font-size: 15px;

@@ -29,7 +29,6 @@ body{
 }
 
 .chat-navs-btn{
-  
   color: white;
   background-color:#1a2f3e;
   cursor: pointer;
@@ -41,16 +40,14 @@ body{
   font-weight: 600;
 }
 .welcome{
-  color:white ;
+  color:white;
   margin-top: 10px;
   margin-bottom: 3px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  /* background-color: white; */
   border-radius: 5px;
   border: none;
   padding: 10px;
-  
 }
 .nazz{
   display: flex;
@@ -59,54 +56,48 @@ body{
   background-color: #1a2f3e;
   border: none;
   color: white;
-  font-size: 30px;
+  font-size: 27px;
   margin-top: 15px;
   cursor: pointer;
 }
 .dropdown {
   position: relative; 
 }
-
 .dropdown-content {
   position: absolute; 
-  top: calc(100% + 5px); 
-  right: 12px; 
+  top: calc(100% + 11.5px); 
+  right: 16px; 
   background-color: white;
   color: #1a2f3e;
   cursor: pointer;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 15px;
+  padding: 6px;
+  border-radius: 0px;
+  font-size: 12px;
 }
 .dropdown-content:hover{
   background-color: #1a2f3e;
   color: white;
 }
-
-
-
-
 .chat-inputs{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin-top: 19px;
-    
-  
-    
 }
 .chat-inputs-2{
     display: flex;
     justify-content: space-between;
-    width: 900px;
+    width: 90%;
+    max-width: 900px;
     padding: 10px;
     align-items: center;
     gap: 10px;
     border-radius: 10px;
     background: white;
     margin-left: 0px;
+    
     margin-top: -7px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     
@@ -173,7 +164,7 @@ body{
     text-align: left;
     line-height: 20px;
     font-weight: 500;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
     
 
   }
@@ -214,8 +205,19 @@ body{
     margin-top: 10px;
     text-align: justify;
     letter-spacing: 1px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
     
   }
+  .link-button{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+  }
+  .link-button:hover{
+    background-color: #226845;
+    color: white;
+  }
+  
 
   
 
@@ -247,31 +249,20 @@ body{
       letter-spacing: 0.3px;
       font-weight: 600;
     }
-    /* .welcome{
-      color: white;
-      margin-top: 3px;
-      margin-bottom: 3px;
-      font-size: 14px;
-      font-weight: 600;
-    } */
-    
+   
 .welcome{
   color:white ;
   margin-top: 15px;
   margin-right: -10px;
   font-size: 10px;
-  font-weight: 500;
-
-  
+  font-weight: 500;  
 }
 .nazz{
   display: flex;
 }
 .nazz-dots{
-  background-color: #1a2f3e;
-  
   color: white;
-  font-size: 30px;
+  font-size: 27px;
   margin-top: 15px;
   margin-right: -10px;
   padding-right: 0px;
@@ -295,21 +286,18 @@ body{
   border-radius: 5px;
   font-size: 15px;
 }
-    .navs-nnpc-logo{
+.navs-nnpc-logo{
       width: 80.4px;
     height: 60px;
     margin-left: 10px;
-    }
+}
     
-    .chat-inputs{
+.chat-inputs{
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
-      margin-top: 10px;
-      
-    
-      
+      margin-top: 10px;  
   }
   .chat-inputs-2{
       display: flex;
@@ -475,17 +463,14 @@ body{
     margin-left: 10px;
     }
   .chat-inputs-2{
-      width: 400px;
+      width: 70%;
       padding: 10px;
       margin-left: 0px;
       margin-top: -7px;
-      
   }
-  
   .chat-inputs-placeholder{
       width: 900px;
       padding: 15px;
-    
   }
   .chat-inputs-placeholder::placeholder {
     color: black;
@@ -586,7 +571,7 @@ body{
     
   
   .chat-inputs-2{
-      width: 520px;
+      width:  80%;
       padding: 10px;
       align-items: center;
       margin-left: 0px;
@@ -644,6 +629,7 @@ body{
       margin-right: -10px;
       font-size: 15px;
       font-weight: 500;
+     
     }
     
     .nazz-dots{
@@ -666,7 +652,7 @@ body{
   
   
   .chat-inputs-2{
-    width: 600px;
+    width: 80%;
     padding: 10px;
     margin-left: 0px;
     margin-top: -7px;
@@ -691,7 +677,7 @@ body{
 
 .bot-message{
   padding: 20px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   align-items: start;
@@ -709,4 +695,16 @@ body{
   
 }
 
+}
+
+@media (min-width:993px) and (max-width:1150px){
+  .chat-inputs-2{
+    width: 80%;
+}
+.bot-message{
+ margin-left: 78px;
+}
+.user-message{
+  margin-right: 66px;
+}
 }

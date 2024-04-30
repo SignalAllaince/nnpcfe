@@ -85,7 +85,7 @@ const Lightmode = ({ handleFun }) => {
             
 
             <div className='footer'>
-                <p>Powered by SATH</p>
+                <p>@ SATH</p>
             </div>
           </div>
 

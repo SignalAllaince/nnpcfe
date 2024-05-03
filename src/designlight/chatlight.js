@@ -166,7 +166,7 @@ const Chatlight = ({ handleOut, userName, userEmail }) => {
 
   const sendMessages = async () => {
     const welcomeMessage = `Welcome, ${userName}, I am INEO service desk assistant.`;
-    const additionalMessage = `Do you need information, want to log a service request, or report an incident?`;
+    const additionalMessage = `Do you have a question or need assistance?`;
     
     const botReplies = [
       { type: 'bot', text: welcomeMessage },

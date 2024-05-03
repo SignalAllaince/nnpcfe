@@ -335,7 +335,7 @@ body{
     color: black;
   }
   .chat-container {
-      height: calc(20vh - -70px);
+      height: calc(70vh - -70px);
       overflow-y: auto;
       padding: 20px;
       margin-top: 0px;
@@ -417,7 +417,7 @@ body{
 
  
 
-  @media (min-width:496px) and (max-width:600px){
+  @media (min-width:474px) and (max-width:600px){
     
     .formatted-message {
       word-wrap: break-word;
@@ -476,8 +476,7 @@ body{
     color: black;
   }
   .chat-container {
-      margin-top: 0px;
-      margin-top: 66px;
+    height: calc(44vh - -70px);
     }
     .chat-message {
       margin-bottom: 20px;
@@ -588,7 +587,7 @@ body{
   
   .chat-container {
       
-      margin-top: 65px;
+    height: calc(44vh - -70px);
       
     }
   
@@ -605,7 +604,6 @@ body{
     
   
     .bot-message{
-     
       font-size: 14px;
       font-weight: 500;
       line-height: 20px;
@@ -613,7 +611,6 @@ body{
       margin-left: 28px;
       text-align: justify;
       letter-spacing: 1px;
-      
     }
   }
   @media (min-width:766px) and (max-width:992px){

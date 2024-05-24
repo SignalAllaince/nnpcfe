@@ -73,9 +73,10 @@ body{
     margin-right: 30px;
 }
 .nav-btn:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #56656f;
+    
+    background-color: #1a2f3e;
     color: white;
+    border: solid white;
     
 }
 .login-btn{
@@ -96,9 +97,12 @@ body{
 }
 
 .login-btn:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color:#56656f;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    background-color: #1a2f3e;
     color: white;
+    border: solid white;
+    padding: 10px;
+    
 }
 
 
@@ -429,6 +433,9 @@ line-height: 24px; /* 150% */
         width: 100px;
         margin-right: 10px;
     } 
+    .login-btn:hover{
+        padding: 5px;
+    }
     .home-middle-first-text{
         font-size:40px;
         line-height: 50px;

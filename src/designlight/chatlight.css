@@ -123,6 +123,7 @@ body{
 .chat-inputs-placeholder::placeholder {
   color: black;
 }
+
 .chat-container {
     height: calc(44vh - -70px);
     overflow-y: auto;
@@ -660,15 +661,11 @@ body{
   width: fit-content;
   max-width: 400px;
   font-size: 14px;
-  
-  
   margin-right: 40px;
- 
   text-align: justify;
   line-height: 20px;
   font-weight: 500;
   letter-spacing: 1px;
-
 }
 
 

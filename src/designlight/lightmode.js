@@ -180,7 +180,7 @@ const Lightmode = ({ handleFun }) => {
                 </div>
 
                 <div className='footer'>
-                    <p>@ SATH</p>
+                    <p>@ NNPC</p>
                 </div>
             </div>
         </section>

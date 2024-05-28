@@ -148,7 +148,7 @@ const Lightmode = ({ handleFun }) => {
                         WELCOME TO <br /> <span className='welcome1'>NNPC SERVICE DESK</span>
                     </p>
                     <p className='home-middle-second-text'>
-                        <span>one-stop solution for efficient and responsive service support.</span> <br /><span>Have a question or need assistance? We're here to help!</span>
+                        <span>Your one-stop solution for efficient and responsive service support.</span> <br /><span>Have a question or need assistance? We're here to help!</span>
                     </p>
 
                     <div className='home-middle-third'>

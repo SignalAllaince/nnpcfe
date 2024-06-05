@@ -142,6 +142,10 @@
 // };
 
 // export default Chatlight;
+
+
+
+
 import React, { useState, useRef, useEffect } from 'react';
 import logo5 from '../image/image2.png';
 import './chatlight.css';
@@ -211,9 +215,9 @@ const Chatlight = ({ handleOut, userName, userEmail }) => {
   };
 
   const processBotReply = (response) => {
-    // Regular expression to match URLs
+    
     const urlRegex = /(https?:\/\/[^\s]+)/g;
-    // Replace all URLs with clickable buttons
+    
     const processedResponse = response.replace(urlRegex, '<button class="link-button" data-url="$1">Click Here</button>');
     return processedResponse;
   };
@@ -259,6 +263,7 @@ const Chatlight = ({ handleOut, userName, userEmail }) => {
             {dropdownVisible && (
               <div>
                 <button className='dropdown-content' onClick={handleOut}>Logout</button>
+                
               </div>
             )}
           </div> 

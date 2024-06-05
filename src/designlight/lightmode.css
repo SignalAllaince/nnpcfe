@@ -260,10 +260,8 @@ line-height: 24px; /* 150% */
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
-    line-height: 140%; 
     margin-bottom: -20px;
     margin-top: 70px;
-    
 }
 
 /* MEDIA QUERIES */
@@ -394,14 +392,15 @@ line-height: 24px; /* 150% */
     
     
     .footer{
-        background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
+        /* background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
         backdrop-filter: blur(20px);
         color: #ECECEC;
-        text-align: center;
+        text-align: center; */
         font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
+        /* font-style: normal;
+        font-weight: 500; */
         line-height: 140%; 
+        padding: 10px;
         
     }
 

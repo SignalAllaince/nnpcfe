@@ -21,9 +21,12 @@ const Lightmode = ({ handleFun }) => {
                     <img className='nav-nnpc-logo' src={logo5} alt="" />
                 </div>
                 <div>
-                    <Link to="https://nnpcgroup.com" target="_blank" rel="noopener noreferrer">
-                        <button className='nav-btn' >Official Website</button>
+                    <Link to="https://app.powerbi.com/reportEmbed?reportId=aa67374b-8491-42f1-b924-eaee97245b07&autoAuth=true&ctid=47a5a918-b4ec-470f-86ca-c67e821ce45b"  rel="noopener noreferrer">
+                        <button className='nav-btn' >Reporting</button>
                     </Link>
+                    {/* <Link to="https://nnpcgroup.com" target="_blank" rel="noopener noreferrer">
+                        <button className='nav-btn' >Official Website</button>
+                    </Link> */}
                 </div>
             </div>
 

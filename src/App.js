@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal, MsalProvider } from '@azure/msal-react';
 import { loginRequest } from "./config";
-// import axios from 'axios';
 import './App.css';
 import Lightmode from './designlight/lightmode'
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';

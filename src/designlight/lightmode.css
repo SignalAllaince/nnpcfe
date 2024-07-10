@@ -1,50 +1,16 @@
-
-  
-  
-  
-  
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
-body{
+body {
     font-family: "Arial";
-    
 }
-
-/* .bt{
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    margin-top: -5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
-    color: white;
-}
-.bt:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    color: #1a2f3e;
-} */
-/* .nav-icons{
-    width: 5px;
-    height: 10px;
-    display: flex;
-    gap: 15px;
-} */
-
 .nav-header-content {
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
-    background-color: #1a2f3e;
+    background-color: #fff;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    
-
 }
 
 .nav-nnpc-logo{
@@ -57,15 +23,15 @@ body{
 
 
 .nav-btn{
-    color: #1a2f3e;
+    color: #fff;
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%; /* 16px */
+    line-height: 100%; 
     letter-spacing: 0.16px;
     text-transform: uppercase;
     border-radius: 56px;
-    background: white;
+    background: #159351;
     padding: 15px 5px;
     width: 170px;
     border: none;
@@ -73,22 +39,20 @@ body{
     margin-right: 30px;
 }
 .nav-btn:hover{
-    
-    background-color: #1a2f3e;
+    background-color: #12723d;
     color: white;
     border: solid white;
-    
 }
 .login-btn{
-    color: #1a2f3e;
+    color: white;
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%; /* 16px */
+    line-height: 100%; 
     letter-spacing: 0.16px;
     text-transform: uppercase;
     border-radius: 56px;
-    background: white;
+    background: #159351;
     padding: 12px;
     width: 120px;
     border: none;
@@ -98,7 +62,7 @@ body{
 
 .login-btn:hover{
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-    background-color: #1a2f3e;
+    background-color: #12723d;
     color: white;
     border: solid white;
     padding: 10px;
@@ -107,12 +71,11 @@ body{
 
 
 .background-container {
-    background-image: url(../image/oh.png);
+    background-image: url(../image/oo.png);
     background-size: cover;
     background-position: center;
     position: relative;
     
-   
 }
 
 .background-overlay {
@@ -121,8 +84,9 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    
     z-index: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .home-middle{
@@ -162,22 +126,19 @@ body{
     align-items: center;
     flex: 1 0 0;
     border-radius: 56px;
-    background: #1a2f3e;
+    background: #fff;
     width:425px ;
     margin-top: -20px;
 
 }
 .home-middle-third-text{
-    color:  white;
+    /* color:  white; */
     font-size: 17px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
     margin-left: 20px;
 }
-
-
-
 
 .home-down{
     display: flex;
@@ -186,10 +147,9 @@ body{
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #1a2f3e;
+    background: #6dbe4f;
     width: 297.33px;
     height: 297px;
-    
 }
 .home-down2{
     display: flex;
@@ -198,7 +158,7 @@ body{
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #000000;
+    background: #00b050;
     width: 297.33px;
     height: 297px;
 }
@@ -209,7 +169,7 @@ body{
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #6dbe4f; 
+    background: #159351; 
     width: 297.33px;
     height: 297px;
 }
@@ -222,22 +182,20 @@ body{
 }
 .home-down-p1{
     color: white;
-text-align: center;
-
-font-size: 17px;
-font-style: normal;
-font-weight: 600;
-line-height: 29px; 
-margin-bottom: -20px;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29px; 
+    margin-bottom: -20px;
 }
 .home-down-p2{
     color: white;
-text-align: center;
-
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
 }
 .h-d {
     display: flex;
@@ -247,11 +205,7 @@ line-height: 24px; /* 150% */
     margin-top: 70px;
     z-index: 1;
     position: relative;
-    
 }
-
-
-
 .footer{
     background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
     backdrop-filter: blur(20px);
@@ -262,26 +216,149 @@ line-height: 24px; /* 150% */
     font-weight: 500;
     margin-bottom: -20px;
     margin-top: 70px;
+    
 }
 
 /* MEDIA QUERIES */
- @media (min-width:200px) and (max-width:475px) {
+@media (min-width:200px) and (max-width:399px) {
     html, body {
         height: 100%;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-    
-    
+    } 
     body {
         display: flex;
         flex-direction: column;
         font-family: Arial, sans-serif;
+    } 
+    
+     section {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .background-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-btn{
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.16px;
+        padding: 13px 3px;
+        width: 110px;
+    }
+    .nav-nnpc-logo{
+        width: 120.4px;
+        height: 60px;
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+   
+    .home-middle-third{
+        width: 350px;
+    }
+    .home-middle-third-text{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 140%;
+        margin-left: 20px;
+    }
+     .login-btn{
+        font-size: 12px;
+        line-height: 100%; 
+        letter-spacing: 0.16px;
+        padding: 7px;
+        width: 100px;
+        margin-right: 10px;
+    } 
+    .login-btn:hover{
+        padding: 4px;   
+    }
+    .home-middle-first-text{
+        font-size:31px;
+        line-height: 50px;
+        letter-spacing: 0.5px;
+    }
+    .home-middle-second-text{
+        font-family: "Arial";
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 120%; 
     }
     
+    .h-d {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+        justify-content: flex-start; 
+        margin-left: 10px;
+        /* margin-bottom: 100px; */
+    }
     
-    section {
+    .h-d::-webkit-scrollbar {
+        display: none; 
+    }
+    
+    .home-down,
+    .home-down2,
+    .home-down3 {
+        flex-shrink: 0;
+        width: calc(37%); 
+        margin-right: -12px; 
+    }
+    .home-down-icon{
+        width: 100.026px;
+        height: 100.072px;
+        flex-shrink: 0;
+        margin-top: -10px;
+        margin-bottom: -50px;
+    }
+    .home-down-p1{
+        color: white;
+    text-align: center;
+    
+    font-size: 12px;
+    font-style: normal;
+    /* font-weight: 600; */
+    line-height: 29px; 
+    /* margin-bottom: -20px; */
+    }
+    .home-down-p2{
+        color: white;
+    text-align: center;
+    
+    font-size: 10px;
+    font-style: normal;
+    line-height: 24px; 
+    }
+    
+    .footer{
+       margin-top: 80px;
+    } 
+
+ } 
+
+
+ @media (min-width:400px) and (max-width:475px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } 
+    body {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+    } 
+    
+     section {
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -323,9 +400,7 @@ line-height: 24px; /* 150% */
         margin-right: 10px;
     } 
     .login-btn:hover{
-       
-        padding: 4px;
-        
+        padding: 4px;   
     }
     .home-middle-first-text{
         font-size:35px;
@@ -385,32 +460,19 @@ line-height: 24px; /* 150% */
     
     font-size: 11px;
     font-style: normal;
-    /* font-weight: 400; */
     line-height: 24px; 
     }
     
-    
-    
     .footer{
-        /* background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
-        backdrop-filter: blur(20px);
-        color: #ECECEC;
-        text-align: center; */
-        font-size: 15px;
-        /* font-style: normal;
-        font-weight: 500; */
-        line-height: 140%; 
-        padding: 10px;
-        
-    }
+       margin-top: 80px;
+    } 
 
  } 
 
 
 
 
-
-@media (min-width:496px) and (max-width:600px){
+@media (min-width:476px) and (max-width:600px){
     .nav-btn{
         font-size: 10px;
         font-weight: 800;
@@ -510,30 +572,14 @@ line-height: 24px; /* 150% */
         backdrop-filter: blur(20px);
         color: #ECECEC;
         text-align: center;
-       
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%; 
         margin-top: -61px;
     }
-    /* .bt{
-        background-color: white;
-        border: none;
-        border-radius: 10px;
-        margin-top: -5px;
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        background-color: #1a2f3e;
-        color: white;
-        
-    } */
 }
 @media (min-width:601px) and (max-width:768px){
-    /* .bt{
-        font-size: 15px;
-        margin-left: -10px;
-    } */
     .home-middle-third-text{
         font-size: 15px;
         font-style: normal;
@@ -578,7 +624,7 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #1a2f3e;
+    background: #6dbe4f;
     width: 400.33px;
     height: 340px;
     
@@ -590,7 +636,7 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #000000;
+    background: #00b050;
     width: 400.33px;
     height: 340px;
 }
@@ -601,7 +647,7 @@ line-height: 24px; /* 150% */
     align-items: center;
     
     border-radius: 16px;
-    background: #6dbe4f; 
+    background: #159351; 
     width: 400px;
     height: 340px;
    
@@ -671,8 +717,6 @@ line-height: 24px; /* 150% */
         margin-top: 150px;
     }
 
-    
-
 .home-down{
     display: flex;
     padding: 19px 20px 48px 20px;
@@ -680,10 +724,9 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #1a2f3e;
+    background: #6dbe4f;
     width: 330.33px;
     height: 340px;
-    
 }
 .home-down2{
     display: flex;
@@ -692,7 +735,7 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #000000;
+    background: #00b050;
     width: 330.33px;
     height: 340px;
 }
@@ -703,10 +746,9 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #6dbe4f; 
+    background: #159351; 
     width: 330.33px;
     height: 340px;
-   
 }
 .home-down-icon{
     width: 140.026px;
@@ -718,11 +760,10 @@ line-height: 24px; /* 150% */
 .home-down-p1{
     color: white;
 text-align: center;
-
 font-size: 16px;
 font-style: normal;
 font-weight: 600;
-line-height: 29px; /* 116% */
+line-height: 29px;
 margin-bottom: -20px;
 }
 .home-down-p2{
@@ -745,136 +786,18 @@ line-height: 24px; /* 150% */
 }
 
     .footer{
-        background: linear-gradient(90deg, #B1F6CF 12.78%, #6593BE 57.2%, #B0AA25 90.68%);
-        backdrop-filter: blur(20px);
-        color: #ECECEC;
-        text-align: center;
-       
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%; 
         margin-top: -61px;
     }
 }
 
 @media (min-width:993px) and (max-width:1200px){
     
-/* .bt{
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    margin-top: -5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #1a2f3e;
-    color: white;
-}
-.bt:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    color: #1a2f3e;
-} */
 
-.nav-header-content{
-    
-        position: fixed;
-        top: 0;
-        width: 100%;
-        display: flex;
-        background-color: #1a2f3e;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px;
-        backdrop-filter: blur(12px);
-}
-.nav-nnpc-logo{
-    width: 131.4px;
-    height: 72px;
-    flex-shrink: 0;
-    
-}
-/* .nav-icons{
-    width: 5px;
-    height: 10px;
-    display: flex;
-    gap: 15px;
-} */
-
-.nav-btn{
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 100%; /* 16px */
-    letter-spacing: 0.16px;
-    padding: 15px 5px;
-    width: 170px;
-}
-
-.login-btn{
-    color: #1a2f3e;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; /* 16px */
-    letter-spacing: 0.16px;
-    text-transform: uppercase;
-    border-radius: 56px;
-    background: white;
-    padding: 12px;
-    width: 120px;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-
-.home-middle{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
-    justify-content: center;
-}
-.home-middle-first-text{
-    
-    
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 70px;
-    letter-spacing: 0.5px;
-    margin-bottom: -50px;
-    margin-top: 150px;
-}
-.home-middle-second-text{
-    color: white;
-    text-align: center;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%; 
-    margin-bottom: 0px;
-}
 .home-middle-third{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1 0 0;
-    border-radius: 56px;
-    background: #1a2f3e;
+    background: #fff;
     width:425px ;
-
+    padding: 2px;
 }
-.home-middle-third-text{
-    color:  white;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%; /* 26.6px */
-    margin-left: 20px;
-}
-
-
 
 .home-down{
     display: flex;
@@ -883,7 +806,7 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #1a2f3e;
+    background: #6dbe4f;
     width: 297.33px;
     height: 297px;
     
@@ -895,7 +818,7 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #000000;
+    background: #00b050;
     width: 297.33px;
     height: 297px;
 }
@@ -906,7 +829,7 @@ line-height: 24px; /* 150% */
     align-items: center;
     gap: 32px;
     border-radius: 16px;
-    background: #6dbe4f; 
+    background: #159351; 
     width: 297.33px;
     height: 297px;
 }

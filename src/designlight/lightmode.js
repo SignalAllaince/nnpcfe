@@ -1,11 +1,10 @@
-
 import React from 'react';
 import './lightmode.css';
-
 import logo5 from '../image/image2.png';
 import logo6 from '../image/icon1.png';
 import logo7 from '../image/icon2.png';
 import logo8 from '../image/icon3.png';
+import logo9 from '../image/nnpc.png'
 import { Link } from 'react-router-dom';
 import "@fontsource/montserrat";
 
@@ -15,25 +14,22 @@ const Lightmode = ({ handleFun }) => {
     console.log(encoded_url);
 
     return (
-        <section>
+        <section className='scroll-container'> 
             <div className='nav-header-content'>
                 <div>
-                    <img className='nav-nnpc-logo' src={logo5} alt="" />
+                    <img className='nav-nnpc-logo' src={logo9} alt="NNPC Logo" />
                 </div>
                 <div>
                     <Link to="https://app.powerbi.com/reportEmbed?reportId=aa67374b-8491-42f1-b924-eaee97245b07&autoAuth=true&ctid=47a5a918-b4ec-470f-86ca-c67e821ce45b"  rel="noopener noreferrer">
-                        <button className='nav-btn' >Reporting</button>
+                        <button className='nav-btn'>Reporting</button>
                     </Link>
-                    {/* <Link to="https://nnpcgroup.com" target="_blank" rel="noopener noreferrer">
-                        <button className='nav-btn' >Official Website</button>
-                    </Link> */}
                 </div>
             </div>
 
             <div className="background-container">
                 <div className="background-overlay"></div>
                 <div className='home-middle'>
-                    <p className='home-middle-first-text' style={{ fontFamily: "montserrat", fontWeight: "600" }}>
+                    <p className='home-middle-first-text'>
                         WELCOME TO <br /> <span className='welcome1'>NNPC SERVICE DESK</span>
                     </p>
                     <p className='home-middle-second-text'>
@@ -42,7 +38,7 @@ const Lightmode = ({ handleFun }) => {
 
                     <div className='home-middle-third'>
                         <p className='home-middle-third-text'>
-                            How can i help you?
+                            How can I help you?
                         </p>
                         <button className='login-btn' onClick={handleFun}>
                             Get started
@@ -52,19 +48,19 @@ const Lightmode = ({ handleFun }) => {
 
                 <div className='h-d'>
                     <div className='home-down'>
-                        <img className='home-down-icon' src={logo6} alt="" />
+                        <img className='home-down-icon' src={logo6} alt="Support Icon"/>
                         <p className='home-down-p1'>Seamless Support with NNPC AI Service Desk</p>
                         <p className='home-down-p2'>An advanced application meticulously crafted to transform your internal support system. Embrace a new era of service management.</p>
                     </div>
                     <div className='home-down2'>
-                        <img className='home-down-icon' src={logo7} alt="" />
+                        <img className='home-down-icon' src={logo7} alt="Support Icon" />
                         <p className='home-down-p1'>Timeless Support with NNPC AI Service Desk</p>
                         <p className='home-down-p2'>Embark on a Journey of Effortless Support with NNPC AI Service Desk. Our intricately designed application redefines your internal support system.</p>
                     </div>
                     <div className='home-down3'>
-                        <img className='home-down-icon' src={logo8} alt="" />
-                        <p className='home-down-p1'> Revolutionizing Support with NNPC Service Desk</p>
-                        <p className='home-down-p2'> Our cutting-edge application blends artificial intelligence seamlessly with service management, delivering unparalleled support.</p>
+                        <img className='home-down-icon' src={logo8} alt="Support Icon"/>
+                        <p className='home-down-p1'>Revolutionizing Support with NNPC Service Desk</p>
+                        <p className='home-down-p2'>Our cutting-edge application blends artificial intelligence seamlessly with service management, delivering unparalleled support.</p>
                     </div>
                 </div>
 
@@ -73,7 +69,8 @@ const Lightmode = ({ handleFun }) => {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Lightmode;
+

@@ -23,7 +23,7 @@ const Chatlight = ({ handleOut, userName, userEmail }) => {
   }, []);
 
   const sendMessages = async () => {
-    const welcomeMessage = `Welcome, ${userName}, I am INEO service desk assistant.`;
+    const welcomeMessage = `Welcome ${userName}, I am INEO service desk assistant.`;
     const additionalMessage = `Do you have a question or need assistance?`;
 
     const botReplies = [
@@ -42,7 +42,7 @@ const Chatlight = ({ handleOut, userName, userEmail }) => {
       const requestBody = { user: currentMessage };
       const botReplyLoading = { type: 'bot', text: 'Generating Reply...', loading: true, isLoading: true };
       setMessages(prevMessages => [...prevMessages, botReplyLoading]);
-      const headers = { 'Content-Type': 'application/json', 'userEmail': userEmail, 'userName': userName };
+      const headers = { 'Content-Type': 'application/json', 'userEmail': "userEmail", 'userName': userName };
       const response = await fetch('https://nnpchelpdeskbe.azurewebsites.net/bot', {
         method: 'POST',
         headers: headers,

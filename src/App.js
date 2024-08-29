@@ -30,10 +30,14 @@ const WrappedView = () => {
   //  this is for the useremail showing
 
 
+  // const Vname = activeAccount ? activeAccount.name.split(' ').join(' ') : '';
+
   const Vname = activeAccount ? activeAccount.name.split(' ').slice(0, 2).join(' ') : '';
   // const Vname = activeAccount ? activeAccount.name.split(' ')[0] : ''; FOR ONLY FIRST NAME
 
-  // const UName = `${accounts[0].name}` THIS IS FOR THE FULL NAME SHWOING
+  // const VName = `${accounts[0].name}` THIS IS FOR THE FULL NAME SHWOING
+  // const Vname = activeAccount ? activeAccount.name : '';
+
 
   return (
     <div className="App">

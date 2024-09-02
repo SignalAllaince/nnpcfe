@@ -64,11 +64,17 @@ const Chatlight = ({ handleOut, userName, userEmail }) => {
     inputRef.current.value = '';
   };
 
-  const processBotReply = (response) => {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const processedResponse = response.replace(urlRegex, '<button class="link-button" data-url="$1">Click Here</button>');
-    return processedResponse;
-  };
+//  const processBotReply = (response) => {
+//   const urlRegex = /(https?:\/\/[^\s\)\.]+)/g;
+//   const processedResponse = response.replace(urlRegex, '<button class="link-button" data-url="$1">Click Here</button>');
+//   return processedResponse;
+// };
+
+function processBotReply(response) {
+  const urlRegex = /\[.*?\]\((https?:\/\/[^\s]+)\)/;
+  const processedResponse = response.replace(urlRegex, '<button class="link-button" data-url="$1">Click Here</button>');
+  return processedResponse;
+}
 
   useEffect(() => {
     const handleButtonClick = (event) => {

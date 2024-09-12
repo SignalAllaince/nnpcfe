@@ -2,7 +2,7 @@
 
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   margin: 0;
   padding: 0;
   background-color: #159351; 
@@ -103,14 +103,30 @@ body {
   border-radius: 10px;
   padding: 20px;
   word-wrap: break-word;
-  line-height: 20px;
+  line-height: 28px;
   font-weight: 500;
   max-width: 50%;
   color: white; 
-  font-size: 14px;
+  font-size: 15px;
+}
+.bot-message {
+  background-color: #fff;
+ 
+  margin-left: 12.2%;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 28px;
+  max-width: 50%;
+  width: fit-content;
+  gap: 10px;
+  border-radius: 10px;
+  text-align: justify;
+  letter-spacing: 1px;
+ 
 }
 
-.bot-message {
+/* .bot-message {
   background-color: #fff;
   float: left;
   margin-left: 12.2%;
@@ -124,8 +140,7 @@ body {
   border-radius: 10px;
   text-align: justify;
   letter-spacing: 1px;
-  /* color: white; */
-}
+} */
 
 .welcome{
   
@@ -162,12 +177,13 @@ body {
   margin-right: 10px;
   background-color: #fff;
 }
-  .formatted-message {
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    padding: 5px;
-    margin: 5px 0;
-  }
+/* .formatted-message {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  padding: 5px;
+  margin: 5px 0;
+} */
+
   .link-button{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
